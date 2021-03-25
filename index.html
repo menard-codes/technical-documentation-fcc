@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Doc | FCC Project</title>
+    <script src="https://kit.fontawesome.com/abd0619045.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav id="nav-bar">
+        <div id="contents">
+            <header><h1>Python3 Documentation</h1></header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#What_this_expects_from_you" class="nav-link">What this expects from you</a></li>
+                <li><a href="#Installation" class="nav-link">Installation</a></li>
+                <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+                <li><a href="#Data_Types" class="nav-link">Data Types</a></li>
+                <li><a href="#Variable" class="nav-link">Variable</a></li>
+                <li><a href="#Comments" class="nav-link">Comments</a></li>
+                <li><a href="#Data_Structures" class="nav-link">Data Structures</a></li>
+                <li><a href="#if_elif_else" class="nav-link">if elif else</a></li>
+                <li><a href="#while_loop" class="nav-link">while loop</a></li>
+                <li><a href="#for_loop" class="nav-link">for loop</a></li>
+                <li><a href="#Functions" class="nav-link">Functions</a></li>
+                <li><a href="#Class" class="nav-link">Class</a></li>
+                <li><a href="#Official_Python" class="nav-link">Official Python</a></li>
+            </ul>    
+        </div>
+    </nav>
+    <a href="#python-logo"><i id="top-button" class="fas fa-arrow-alt-circle-up fa-4x"></i></a>
+    <main id="main-doc">
+        <img id="python-logo" src="images/python-logo.png" alt="python-logo">
+        <p id="note"><b>Note:</b> This is an unofficial Python Documentation. This page exists solely as a project for freeCodeCamp's responsive design course</p>
+        <section id="Introduction" class="main-section">
+            <h2>Introduction</h2>
+            <p>    In a nutshell, Python is an intuitive and easy to understand language that can be used in
+                different applications such as Data Science, Machine Learning and AI, Web Development, Softwares,
+                Operating System, and many more.</p>
+            <p>    And to define Python in technical terms, Python is an interpreted, high-level and general-purpose
+                programming language. Python's design philosophy emphasizes code readability with its notable use of
+                significant indentation.</p>
+            <p>    First off, Python is "interpreted", meaning, Python doesn't have what we call a compiler which is common
+                to languages like C, C++, or Java, which are written closer to machine code. And being an interpreted language
+                makes it intuitive enough for humans to easily read the code, even without ever written a single line of it, and
+                that makes it a "high-level", a language that's very abstracted away from machine code and focuses on human
+                readability. And lastly, Python is General Purpose, which again, is used to create a bunch of other things, like
+                Data Science, Web Development, Softwares, Operating Systems, and even in Computer Graphics (blender for example).
+                And before we end the intro, note that Python is notorious for it's significant use of whitespace, mostly indents,
+                which is highly embeded in its Design Philosophy called "The Zen of Python". (If you have Python installed, try running
+                "import this" to access this easter egg in Python).
+                </p>
+        </section>
+        <section id="What_this_expects_from_you" class="main-section">
+            <h2>What this expects from you</h2>
+            <p>    This documentation is not a tutorial page, and it is expecting you to have some understanding about programming
+                and the concepts like loops, functions, and classes.
+                Though, this guide isn't too technical and beginners can still understand the guide.</p>
+        </section>
+        <section id="Installation" class="main-section">
+            <h2>Installation</h2>
+            <p>    If you're a Linux or Mac User, Python is already installed into your system by default, but you can change to different
+                versions or upgrade what you have by going to their official website at www.python.org</p>
+            <p>    If you're using Windows, just go to the official Python page at www.python.org and download the realease that you want.
+                Then head over to your Downloads folder and open the Python Installer, and just follow the steps you'll see there.</p>
+            <p>    You can check Python if it's installed by opening up the terminal (linux/mac) or cmd (windows) and type python3 --version
+                for linux/mac, or python --version for windows users. If you saw something like Python 3.** (Python 3.8.2, Python 3.7.5, etc.),
+                then you're good to go.</p>
+        </section>
+        <section id="Hello_World" class="main-section">
+            <h2>Hello World</h2>
+            <p>    Once you have Python into your system, let us try it by running a simple Hello World program.
+                First, open your terminal (Linux/Mac) or command prompt/cmd (Windows), and then type python (for windows)
+                or python3 for Linux/Mac. There, you can type print("Hello World") and press enter:</p>
+            <pre>
+                <code>
+        Python 3.8.5 (default, Jan 27 2021, 15:41:15)
+        [GCC 9.3.0] on linux
+        Type "help", "copyright", "credits" or "license" for more information.
+
+        >>> print("Hello World")
+        Hello World
+        >>>
+                </code>
+            </pre>
+            <p>What a nice start, isn't it? <i class="far fa-smile-wink"></i></p>
+        </section>
+        <section id="Data_Types" class="main-section">
+            <h2>Data Types</h2>
+            <p>Like other languages, Python have it's default or native data types called:</p>
+            <pre>
+                <code>
+        string
+        int
+        float
+        complex
+        boolean
+                </code>
+            </pre>
+            <p>Strings are those data that are wrapped inside quotation marks:</p>
+            <pre>
+                <code>
+        "This is a string"                  
+        'This is also a string'             
+        No quotation mark, not a string     
+                </code>
+            </pre>
+            <p>    Integers or int are numeric data types that can be positive, zero, or negative, but have no decimal.
+                Note: int data types don't have quotation marks in them.</p>
+            <pre>
+                <code>
+        16      -> This is an int 
+        -5      -> This is an int 
+        0       -> This is an int 
+        5.84    -> Not an int 
+        "13"    -> Not an int 
+                </code>
+            </pre>
+            <p>    Floats or float are also numeric data types, which can be positive or negative like int, but have decimal places
+                in them.
+                Note: float data types don't have quotation marks on them.</p>
+            <pre>
+                <code>
+        3.14    -> This is a float 
+        -12.672 -> This is a float 
+        0.34    -> This is a float 
+        0       -> Not a float 
+        5       -> Not a float 
+        "4.6"   -> Not a float 
+                </code>
+            </pre>
+            <p>    Complex are just another numeric data, which resembles mathematical complex numbers.</p>
+            <pre>
+                <code>
+        (4+0j)  -> This is a complex data type
+                </code>
+            </pre>
+            <p>Boolean data types have only two values:</p>
+            <pre>
+                <code>
+        True
+        False
+                </code>
+            </pre>
+            <p>    Booleans are case sensitive and can only be written this way.
+                Note: Booleans don't have quotation marks in them.</p>
+            <pre>
+                <code>
+        true    -> Not a boolean 
+        false   -> Not a boolean 
+        "True"  -> Not a boolean 
+        "False" -> Not a boolean 
+                </code>
+            </pre>
+            <p>If you want to check the data type in Python, you can do this:</p>
+            <pre>
+                <code>
+        type("Hello World")
+        print(type(23))
+                </code>
+            </pre>
+        </section>
+        <section id="Variable" class="main-section">
+            <h2>Variable</h2>
+            <p>Variables are used to store data. You can assign a value to a name, and that name will contain the data passed on to it.</p>
+            <pre>
+                <code>
+        Python 3.8.5 (default, Jan 27 2021, 15:41:15)
+        [GCC 9.3.0] on linux
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> name = "Menard"
+        >>> print(name)
+        Menard
+                </code>
+            </pre>
+            <p>You can also use variables to perform some operations like this:</p>
+            <pre>
+                <code>
+        >>> num1 = 5
+        >>> num2 = 7
+        >>> print(num1 + num2)
+        12
+                </code>
+            </pre>
+            <p>Variables can also store values this way:</p>
+            <pre>
+                <code>
+        >>> num1 = 3
+        >>> num2 = 6
+        >>> num3 = num1 + num2
+        >>> print(num3)
+        9
+                </code>
+            </pre>
+        </section>
+        <section id="Comments" class="main-section">
+            <h2>Comments</h2>
+            <p>    Comments are common to all programming languages as it gives a way to communicate between programmers
+                especially about a certain code, on what it does, how it works, what it needs, or sometimes, used as a template
+                to outline a program.
+                Note that comments were ignored by the language when it runs the code.
+                In Python, you can create a comment using the # symbol:</p>
+            <pre>
+                <code>
+        >>> # this is a comment, and it won't run
+        >>>
+        >>> # Below prints Hello World
+        >>> print('Hello World')
+        Hello World
+        >>>
+        >>> # This will not run
+        >>> # print('hello world')
+        >>>
+                </code>
+            </pre>
+        </section>
+        <section id="Data_Structures" class="main-section">
+            <h2>Data Structures</h2>
+            <p>
+                Though variables can be used to store data, the problem is that you can only store one data in them.
+                And here comes the Data Structures to save the day. With data structures, you can store a bunch of data in them,
+                and they can also be passed to variables.
+                In Python, we have 4 built-in Data Structures:
+            </p>
+            <pre>
+                <code>
+        list    # other languages refer to this as an array
+        tuple
+        set
+        dict    # Or Dictionary, which is hash map in other languages
+                </code>
+            </pre>
+            <p>
+                Python lists can store any number of data or none at all, where the data type could be anything. Lists can store
+                strings, ints, floats, complex, and booleans. Lists are constructed using [   ]
+            </p>
+            <pre>
+                <code>
+        >>> [1, 3.14, "Hello", True, (4+0j)]
+        >>> nums = [1, 3, 4.15, -8]
+        >>> my_data = ['menard', 20, True]
+        >>> fruits = ['apple', 'mango', 'banana', 'orange']
+        >>> print(fruits)
+        ['apple', 'mango', 'banana', 'orange']
+        >>> type(fruits)
+        &lt;class 'list'&gt;
+                </code>
+            </pre>
+            <p>
+                You can access data from a list using index. An index is the position of a data inside an array (index starts at 0)
+                To access a data within an array, you specify the array followed by [   ] with index inside:
+            </p>
+            <pre>
+                <code>
+        >>> my_data = ['menard', 20, True]
+        >>> print(my_data[0])
+        menard
+        >>> print(my_data[2])
+        True
+                </code>
+            </pre>
+            <p>
+                You can also change a data inside an array by using it's index:
+            </p>
+            <pre>
+                <code>
+        >>> my_data = ['menard', 20, True]
+        >>> my_data[0] = 'nad'
+        >>> print(my_data)
+        ['nad', 20, True]
+                </code>
+            </pre>
+            <p>Python tuples are like lists and are constructed using ().</p>
+            <pre>
+                <code>
+        >>> (1, -5, 3.15, True)
+        >>> coordinates = (23, 5)
+        >>> print(coordinates[0])
+        23
+                </code>
+            </pre>
+
+            <p>The only difference of tuples with arrays is that you can't change the value inside a tuple:</p>
+
+            <pre>
+                <code>
+        >>> a = (1, 2, 3)
+        >>> a[0] = 6
+        Traceback (most recent call last):
+        File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+        TypeError: 'tuple' object does not support item assignment
+        >>> print(a)
+        (1, 2, 3)
+                </code>
+            </pre>
+
+            <p>Another Python data structure is the Set, which is also like lists and can be constructed using {}</p>
+            <pre>
+                <code>
+        >>> {'Apple', 45, -3, 3.14, True}
+        >>> animals = {'dogs', 'cats', 'birds', 'snakes', 'lizards'}
+                </code>
+            </pre>
+            <p>
+                The difference is that python sets acts similarly as sets in Math, where items are unique and sorted.
+                You can also perform set operations just like in Math
+            </p>
+
+            <pre>
+                <code>
+        >>> numbers = {4, 2, 7, 4, 3, 9}
+        >>> print(numbers)
+        {2, 3, 4, 7, 9}
+                </code>
+            </pre>
+
+            <p>
+                And lastly, we have dictionaries, which are also constructed using {}, and the most unique of all these
+                data structures. Dictionaries are constructed using key-value pairs and accessed using keys:
+            </p>
+            <pre>
+                <code>
+        >>> my_data = {'name': 'Menard', 'age': 20, 'is_student': True}
+        >>> print(my_data[name])
+        Menard
+                </code>
+            </pre>
+
+        </section>
+        <section id="if_elif_else" class="main-section">
+            <h2>if elif else</h2>
+            <p>
+                Conditionals are of great importance in programming languages to give them logic and decision making.
+                Conditionals check a certain condition passed to it and decides which one to execute:
+            </p>
+            <pre>
+                <code>
+        >>> weather = 'Sunny'
+        >>> if weather == 'Rainy':
+        ...     print('Bring an umbrella')
+        ... elif weather == 'Sunny':
+        ...     print('Wear sun glasses')
+        ... else:
+        ...     print('Take care!')
+        ...
+        Wear sun glasses    
+                </code>
+            </pre>
+            <p>
+                The if statement checks if the statement given to it is True, and if it is, it will execute the code inside it.
+                If not, it will continue to next conditional (if any) and check if it is True, and in this case, using the elif
+                statement. If all conditions resulted to false, the else statement (if specified) will be automatically executed.
+            </p>
+        </section>
+        <section id="while_loop" class="main-section">
+            <h2>while loop</h2>
+            <p>
+                Loops let execute a certain code as long as the condition passed on to it is True:
+            </p>
+            <pre>
+                <code>
+                    >>> num = 0
+                    >>> while num &lt; 5:
+                    ...     print(num)
+                    ...     num += 1    # this adds 1 to the num
+                    ...
+                    0
+                    1
+                    2
+                    3
+                    4
+                </code>
+            </pre>
+            <p>
+                The loop above printed the num 5 times while the condition (num &lt; 5) is true. And the moment num reaches 5,
+                the loop breaks, which is achieved by incrementing the count.
+                Note: If the loop does not break, the while loop will never stop.
+            </p>
+        </section>
+        <section id="for_loop" class="main-section">
+            <h2>for loop</h2>
+            <p>The for loop is like while loop, but the difference is that it iterates onto something to create a loop.</p>
+            <pre>
+                <code>
+        >>> name = 'Menard'
+        >>> for letter in name:
+        ...     print(letter)
+        ...
+        M
+        e
+        n
+        a
+        r
+        d
+                </code>
+            </pre>
+        </section>
+        <p>
+            Since a string is an iterable, the for loop iterate through each character of the string name and executed
+            the print(letter) 6 times.
+        </p>
+        <p>If you don't have an iterable, you can use range() function with for loop:</p>
+        <pre>
+            <code>
+        >>> for num in range(10):
+        ...     print(num)
+        ...
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+            </code>
+        </pre>
+        <p>Note that the range uses index notation, and it starts from 0 and gave 10 numbers (0-9 are 10 numbers in total)</p>
+        <section id="Functions" class="main-section">
+            <h2>Functions</h2>
+            <p>
+                Functions are a way for us to abstract a code and can be used many times by calling them.
+                In Python, you can create a function like this:
+            </p>
+            <pre>
+                <code>
+        >>> def say_hi():
+        ...     print('Hi there!')
+        ...
+        >>> say_hi()
+        Hi there!
+        >>> say_hi()
+        Hi there!
+        >>>
+                </code>
+            </pre>
+            <p>
+                Notice that the print statement didn't execute right away. That's because it's inside a function, and you can only
+                activate the code inside it by calling its name.
+            </p>
+            <p>
+                You can also pass an argument or input in a function, and python functions also accept keyword argument:
+            </p>
+            <pre>
+                <code>
+        >>> def greet(name, message="Hi"):
+        ...     print(message + ' ' + name + '!')
+        ...
+        >>> greet('Menard')
+        Hi Menard!
+        >>> greet('nard', message="hello")
+        hello nard!
+                </code>
+            </pre>
+            <p>
+                To get an output from a function, you can use the return keyword.
+            </p>
+            <pre>
+                <code>
+        >>> def add_nums(num1, num2):
+        ...     return num1 + num2
+        ...
+        >>> my_num = add_nums(4, 5)
+        >>> print(my_nums)
+        9
+                </code>
+            </pre>
+        </section>
+        <section id="Class" class="main-section">
+            <h2>Class</h2>
+            <p>
+                Since Python is a multi-paradign language (it supports many design methods), you can also do Object Oriented Programming
+                in Python and you can create a class like this:
+            </p>
+            <pre>
+                <code>
+        >>> class Dog:
+        ...     def bark(self):
+        ...         return 'rooof!'
+        ...     def play_trick(self):
+        ...         return 'does a fetch'
+        ...        
+        >>> my_pet = Dog()
+        >>> my_pet.bark()
+        rooof!
+        >>> my_pet.play_trick()
+        does a fetch
+                </code>
+            </pre>
+            <p>
+                The self here is just a common convention in Python to refer it as a common method of a Python class.
+            </p>
+
+
+            <p>
+                To create a custom constructor in Python, you can overwrite the __init__ method:
+            </p>
+            <pre>
+                <code>
+        >>> class Person:
+        ...     def __init__(self, name, age):
+        ...         self.name = name
+        ...         self.age = age
+        ...     def greet(self):
+        ...         return f'Hi! My name is {self.name}'
+        ...     def say_age(self):
+        ...         return f'I am {self.age} yrs. old'
+        ...     def answer_addition(self, num1, num2):
+        ...         return f'It is {num1 + num2}'
+        ...
+        >>> friend = Person('Menard', 20)
+        >>> friend.name
+        Menard
+        >>> friend.age
+        20
+        >>> friend.greet()
+        Hi! My name is Menard'
+        >>> friend.say_age()
+        I am 20 yrs. old
+        >>> friend.answer_addition(4, 6)
+        It is 10
+                </code>
+            </pre>
+        </section>
+        <section id="Official_Python" class="main-section">
+            <h2>Official Python</h2>
+            Here's the official Python website and Python Documentation.
+            <div><a href="https://www.python.org/" target="_blank">Python Official Website</a></div>
+            <div><a href="https://docs.python.org/3/">Python Official Documentation</a></div>
+        </section>
+    </main>
+
+</body>
+</html>
